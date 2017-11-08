@@ -2,8 +2,10 @@ def add(a,b):
     return a + b
 def subtract(a,b):
     return a - b
+def multiply(a,b):
+    return a*b
 
-ops = {"+": add, "-": subtract}
+ops = {"+": add, "-": subtract,"*": multiply}
 
 def calculate(string):
     stack=list()
