@@ -4,7 +4,6 @@ python:
 install:
         - pip install coverage
         - pip install coveralls
-        - pip install -e . --use-mirrors
 script:
         coverage run -m unittest discover
 
