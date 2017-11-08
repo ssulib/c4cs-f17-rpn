@@ -1,5 +1,5 @@
 language: python
 rvm:
-        - 3.5
+        - "3.5"
 script:
         python -m unittest
