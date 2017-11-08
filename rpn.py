@@ -10,7 +10,7 @@ def multiply(a,b):
 def divide(a,b):
     return a/b;
 def exponent(a,b):
-    return exp(a,b)
+    return exp(b,a)
 
 #table = PrettyTable(["Equation","Result"])
 class bcolors:
@@ -34,10 +34,7 @@ def calculate(string):
             if token == "end":
                 #print(table)
                 exit()
-            try:
-                stack.append(int(token))
-            except ValueError:
-                print(bcolors.WARNING + "Not valid symbol used" + bcolors.HEADER)
+            stack.append(int(token))
         else:
             if len(stack)<2:
                 print(bcolors.WARNING + "Not valid expression" + bcolors.HEADER)
@@ -47,7 +44,7 @@ def calculate(string):
             function = ops[token]
             result = function(arg2,arg1)
             #table.add_row([str(arg2) +" "+ str(arg1) +" "+ token,str(result)])
-            print(bcolors.OKGREEN + str(arg2) +" "+ str(arg1) +" "+ bcolors.OKBLUE + token +" "+ bcolors.OKGREEN+str(result) + bcolors.HEADER)
+            #print(bcolors.OKGREEN + str(arg2) +" "+ str(arg1) +" "+ bcolors.OKBLUE + token +" "+ bcolors.OKGREEN+str(result) + bcolors.HEADER)
             stack.append(result)
 
     return stack.pop()
