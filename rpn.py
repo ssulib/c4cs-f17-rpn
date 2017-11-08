@@ -1,4 +1,4 @@
-import readline
+#import readline
 #from prettytable import PrettyTable
 
 def add(a,b):
