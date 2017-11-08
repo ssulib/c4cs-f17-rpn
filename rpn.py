@@ -9,6 +9,8 @@ def multiply(a,b):
     return a*b
 def divide(a,b):
     return a/b;
+def exponent(a,b):
+    return exp(a,b)
 
 table = PrettyTable(["Equation","Result"])
 class bcolors:
