@@ -1,5 +1,5 @@
 import readline
-from prettytable import PrettyTable
+#from prettytable import PrettyTable
 
 def add(a,b):
     return a + b
@@ -12,7 +12,7 @@ def divide(a,b):
 def exponent(a,b):
     return exp(a,b)
 
-table = PrettyTable(["Equation","Result"])
+#table = PrettyTable(["Equation","Result"])
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -32,7 +32,7 @@ def calculate(string):
     for token in string.split():
         if token not in ops.keys():
             if token == "end":
-                print(table)
+                #print(table)
                 exit()
             try:
                 stack.append(int(token))
@@ -46,7 +46,7 @@ def calculate(string):
             arg1 = stack.pop()
             function = ops[token]
             result = function(arg2,arg1)
-            table.add_row([str(arg2) +" "+ str(arg1) +" "+ token,str(result)])
+            #table.add_row([str(arg2) +" "+ str(arg1) +" "+ token,str(result)])
             print(bcolors.OKGREEN + str(arg2) +" "+ str(arg1) +" "+ bcolors.OKBLUE + token +" "+ bcolors.OKGREEN+str(result) + bcolors.HEADER)
             stack.append(result)
 
