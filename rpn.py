@@ -23,7 +23,7 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-ops = {"+": add, "-": subtract,"*": multiply,"/":divide}
+ops = {"+": add, "-": subtract,"*": multiply,"/":divide,"^":exponent}
 
 def calculate(string):
     stack=list()
